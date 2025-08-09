@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel To‑Do — Simple App</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="bg-overlay"></div>
+
+  <main id="app-root">
+    <header id="datetime" aria-live="polite">Loading date & time...</header>
+
+    <section id="todo">
+      <h2 class="label">One big thing:</h2>
+      <input id="big-thing" class="text-input" type="text" placeholder="What is the one big thing today?" autocomplete="off">
+
+      <h2 class="label">To do:</h2>
+      <div id="todo-items">
+        <input class="text-input todo-item" type="text" placeholder="To-do item 1" autocomplete="off">
+        <input class="text-input todo-item" type="text" placeholder="To-do item 2" autocomplete="off">
+      </div>
+    </section>
+
+    <footer id="quote">Loading quote...</footer>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

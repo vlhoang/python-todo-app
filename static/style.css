@@ -1,0 +1,100 @@
+/* Base/reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  color: white;
+  background-color: #111; /* fallback */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: auto;
+}
+
+/* Dark overlay to improve readability */
+#bg-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+
+/* App root centers the content vertically and horizontally */
+#app-root{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vh 5vw;
+  gap: 2vh;
+}
+
+/* Date/Time styles */
+#datetime{
+  margin-top: 2vh;
+  text-align: center;
+  font-size: 1.5em; /* 1.5x size */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* To-do list block */
+#todo{
+  width: min(900px, 95%);
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  margin: 2vh 0;
+}
+
+.label{
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.text-input{
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px 16px;
+  font-size: 1.5em; /* 1.5x size */
+  color: #ffffff; /* white text */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.04) inset;
+  border-radius: 8px;
+  outline: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.text-input::placeholder{ color: rgba(255, 255, 255, 0.6); }
+.text-input:focus{ background: rgba(255,255,255,0.12); }
+
+#todo-items{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Quote at bottom */
+#quote{
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 1.2em;
+  max-width: 900px;
+  padding: 0 1rem;
+  opacity: 0.95;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  #todo-items{ grid-template-columns: 1fr; }
+  #datetime{ font-size: 1.3em; }
+  .text-input{ font-size: 1.2em; padding: 10px 12px; }
+}
