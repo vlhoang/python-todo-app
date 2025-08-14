@@ -9,7 +9,7 @@ app = Flask(__name__)
 def quote():
     return jsonify({
         "quote": "Life is what happens when you're busy making other plans.",
-        "author": "John Lennon"
+        "author": "John Lennonn"
     })
 
 
