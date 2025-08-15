@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'my-jenkins-python-azure'
+            args '-u root:root' // so we can install extra packages if needed
+        }
+    }
 
     environment {
         AZURE_CREDENTIALS = credentials('azure-sp-credentials')
