@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'my-jenkins-python-azure'
+            image 'jenkins-python-runner'
             args '-u root:root' // so we can install extra packages if needed
         }
     }
